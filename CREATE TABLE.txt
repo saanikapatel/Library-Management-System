@@ -1,0 +1,319 @@
+CREATE TABLE Student_Information (
+    Student_ID VARCHAR(8) PRIMARY KEY,
+    Student_Name VARCHAR(255),
+    Ph_Number VARCHAR(15),
+    Branch VARCHAR(50),
+    Year INT,
+    CONSTRAINT Student_ID_Length Check (LENGTH(Student_ID)=8)
+);
+
+
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1001', 'John Doe', '123-456-7890', 'Computer Science', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1002', 'Alice Smith', '987-654-3210', 'Electrical Engineering', 2);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1003', 'Michael Johnson', '555-123-4567', 'Mechanical Engineering', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1004', 'Emily Brown', '111-222-3333', 'Civil Engineering', 3);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1005', 'David Wilson', '999-888-7777', 'Computer Science', 2);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1006', 'Sophia Lee', '444-555-6666', 'Electrical Engineering', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1007', 'William Miller', '777-333-2222', 'Computer Science', 3);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1008', 'Olivia Harris', '111-555-9999', 'Mechanical Engineering', 2);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1009', 'James Jackson', '333-777-1111', 'Civil Engineering', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1010', 'Charlotte White', '222-888-4444', 'Electrical Engineering', 3);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1011', 'Matthew Turner', '555-777-1111', 'Mechanical Engineering', 2);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1012', 'Ava Parker', '123-456-7890', 'Civil Engineering', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1013', 'Liam Cooper', '987-654-3210', 'Computer Science', 3);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1014', 'Emma Scott', '555-123-4567', 'Electrical Engineering', 2);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1015', 'Noah Hall', '111-222-3333', 'Mechanical Engineering', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1016', 'Isabella Wright', '999-888-7777', 'Civil Engineering', 2);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1017', 'Benjamin Turner', '444-555-6666', 'Computer Science', 3);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1018', 'Mia Foster', '777-333-2222', 'Mechanical Engineering', 1);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1019', 'Ethan King', '111-555-9999', 'Electrical Engineering', 3);
+INSERT INTO Student_Information (Student_ID, Student_Name, Ph_Number, Branch, Year) VALUES ('STUD1020', 'Olivia Green', '333-777-1111', 'Computer Science', 2);
+
+
+
+
+
+
+
+
+CREATE TABLE Author (
+    Author_ID VARCHAR(4) PRIMARY KEY,
+    Author_Name VARCHAR(255)
+);
+
+
+
+
+
+-- Inserting values into the Author table
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A001', 'John Smith');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A002', 'Alice Johnson');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A003', 'Michael Brown');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A004', 'Sarah Davis');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A005', 'David Clark');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A006', 'Linda Wilson');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A007', 'Robert Lee');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A008', 'Susan Taylor');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A009', 'James White');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A010', 'Maria Garcia');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A011', 'Charles Turner');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A012', 'Karen Perez');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A013', 'Daniel Miller');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A014', 'Margaret Harris');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A015', 'William Martin');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A016', 'Nancy Rodriguez');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A017', 'Joseph Jackson');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A018', 'Donna Wilson');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A019', 'Richard Young');
+INSERT INTO Author (Author_ID, Author_Name) VALUES ('A020', 'Cynthia Evans');
+
+
+
+
+
+
+
+
+
+CREATE TABLE Publisher (
+    Publisher_ID VARCHAR(4) PRIMARY KEY,
+    Publisher_Name VARCHAR(255)
+);
+
+
+
+
+
+-- Inserting values into the Publisher table
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P001', 'ABC Publications');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P002', 'XYZ Books');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P003', 'GoodReads Publishing');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P004', 'Novelty Publishers');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P005', 'BookWorld Ltd.');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P006', 'Readers, Inc.');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P007', 'Bookworm Press');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P008', 'Literary Ventures');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P009', 'PrintedWords Publishing');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P010', 'Inkwell Publications');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P011', 'WiseWords Media');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P012', 'PageTurner Books');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P013', 'Prose Publications');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P014', 'Cover to Cover Publishing');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P015', 'BookHaven Enterprises');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P016', 'TextWorld Publishing');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P017', 'Scripted Dreams');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P018', 'Infinite Imagination');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P019', 'BookNest Media');
+INSERT INTO Publisher (Publisher_ID, Publisher_Name) VALUES ('P020', 'WordCraft Publications');
+
+
+
+
+
+
+CREATE TABLE Book (
+    ISBN VARCHAR(6) PRIMARY KEY,
+    Book_Title VARCHAR(255),
+    Author_ID VARCHAR(4),
+    Publisher_ID VARCHAR(4),
+    FOREIGN KEY (Author_ID) REFERENCES Author(Author_ID),
+    FOREIGN KEY (Publisher_ID) REFERENCES Publisher(Publisher_ID),
+    CONSTRAINT ISBN_Length Check (LENGTH(ISBN)=6)
+);
+
+
+
+
+
+-- Sample INSERT statements for the Book table with academic book titles
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('B12345', 'Introduction to Physics', 'A001', 'P001');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('C54321', 'Mathematics for Engineers', 'A002', 'P002');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('D98765', 'History of World Wars', 'A003', 'P003');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('A23456', 'Computer Programming Basics', 'A004', 'P004');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('F65432', 'Chemistry Essentials', 'A005', 'P005');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('E12345', 'Economics Principles', 'A006', 'P006');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('B98765', 'Political Science Fundamentals', 'A007', 'P007');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('C23456', 'Biological Sciences Handbook', 'A008', 'P008');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('D65432', 'Engineering Mechanics', 'A009', 'P009');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('A12345', 'Data Structures and Algorithms', 'A010', 'P010');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('F98765', 'Advanced Calculus', 'A011', 'P011');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('E23456', 'Sociology of Culture', 'A012', 'P012');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('B65432', 'Language and Linguistics', 'A013', 'P013');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('C12345', 'Geography Studies', 'A014', 'P014');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('D77777', 'Psychology Principles', 'A015', 'P015');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('A65432', 'Business Management Strategies', 'A016', 'P016');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('F12345', 'Medical Science Essentials', 'A017', 'P017');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('E98765', 'Educational Psychology', 'A018', 'P018');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('B23456', 'Philosophy of Ethics', 'A019', 'P019');
+INSERT INTO Book (ISBN, Book_Title, Author_ID, Publisher_ID) VALUES ('C65432', 'Environmental Studies', 'A020', 'P020');
+
+
+
+
+
+CREATE TABLE Book_Copy (
+    ISBN VARCHAR(6),
+    Book_Copy_ID VARCHAR(4),
+    Availability_Status VARCHAR(3) DEFAULT 'Yes',
+    PRIMARY KEY (Book_Copy_ID),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
+);
+ALTER TABLE Book_Copy
+ADD CONSTRAINT BookCopyIDLength CHECK (LENGTH(Book_Copy_ID) = 4);
+
+
+
+
+
+
+-- Insert records for Book 1 (ISBN 'B12345')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B12345', 'BC01');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B12345', 'BC02');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B12345', 'BC03');
+
+-- Insert records for Book 2 (ISBN 'C54321')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C54321', 'CC01');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C54321', 'CC02');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C54321', 'CC03');
+
+-- Insert records for Book 3 (ISBN 'D98765')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D98765', 'DC01');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D98765', 'DC02');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D98765', 'DC03');
+
+-- Insert records for Book 4 (ISBN 'A23456')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A23456', 'AC01');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A23456', 'AC02');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A23456', 'AC03');
+
+-- Insert records for Book 5 (ISBN 'F65432')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F65432', 'FC01');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F65432', 'FC02');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F65432', 'FC03');
+
+-- Insert records for Book 6 (ISBN 'E12345')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E12345', 'EC01');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E12345', 'EC02');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E12345', 'EC03');
+
+-- Insert records for Book 7 (ISBN 'B98765')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B98765', 'BC04');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B98765', 'BC05');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B98765', 'BC06');
+
+-- Insert records for Book 8 (ISBN 'C23456')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C23456', 'CC04');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C23456', 'CC05');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C23456', 'CC06');
+
+-- Insert records for Book 9 (ISBN 'D65432')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D65432', 'DC04');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D65432', 'DC05');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D65432', 'DC06');
+
+-- Insert records for Book 10 (ISBN 'A12345')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A12345', 'AC04');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A12345', 'AC05');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A12345', 'AC06');
+
+-- Insert records for Book 11 (ISBN 'F98765')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F98765', 'FC04');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F98765', 'FC05');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F98765', 'FC06');
+
+-- Insert records for Book 12 (ISBN 'E23456')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E23456', 'EC04');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E23456', 'EC05');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E23456', 'EC06');
+
+-- Insert records for Book 13 (ISBN 'B65432')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B65432', 'BC07');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B65432', 'BC08');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B65432', 'BC09');
+
+-- Insert records for Book 14 (ISBN 'C12345')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C12345', 'CC07');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C12345', 'CC08');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C12345', 'CC09');
+
+-- Insert records for Book 15 (ISBN 'D77777')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D77777', 'DC07');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D77777', 'DC08');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('D77777', 'DC09');
+
+-- Insert records for Book 16 (ISBN 'A65432')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A65432', 'AC07');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A65432', 'AC08');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('A65432', 'AC09');
+
+-- Insert records for Book 17 (ISBN 'F12345')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F12345', 'FC07');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F12345', 'FC08');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('F12345', 'FC09');
+
+-- Insert records for Book 18 (ISBN 'E98765')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E98765', 'EC07');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E98765', 'EC08');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('E98765', 'EC09');
+
+-- Insert records for Book 19 (ISBN 'B23456')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B23456', 'BC10');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B23456', 'BC11');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('B23456', 'BC12');
+
+-- Insert records for Book 20 (ISBN 'C65432')
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C65432', 'CC10');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C65432', 'CC11');
+INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C65432', 'CC12');
+
+
+
+
+
+
+CREATE TABLE Borrowing_Info (
+    Borrowing_ID NUMBER GENERATED ALWAYS AS IDENTITY,
+    Student_ID VARCHAR2(8),
+    Book_Copy_ID VARCHAR2(4),
+    Title VARCHAR2(255),
+    Issue_Date DATE,
+    Expected_Return_Date DATE,
+    Actual_Return_Date DATE DEFAULT TO_DATE ('01-01-00','DD-MM-YY'),
+    Fine NUMBER DEFAULT 0,
+    CONSTRAINT pk_Borrowing_Info PRIMARY KEY (Borrowing_ID),
+    CONSTRAINT fk_Student FOREIGN KEY (Student_ID) REFERENCES Student_Information (Student_ID),
+    CONSTRAINT fk_BookCopy FOREIGN KEY (Book_Copy_ID) REFERENCES Book_Copy (Book_Copy_ID)
+);
+
+ALTER TABLE Borrowing_Info
+ADD ISBN VARCHAR(6);
+
+ALTER TABLE Borrowing_Info
+ADD CONSTRAINT fk_borrowing_isbn
+FOREIGN KEY (ISBN) REFERENCES Book(ISBN);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
