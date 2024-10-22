@@ -268,30 +268,19 @@ INSERT INTO Book_Copy (ISBN, Book_Copy_ID) VALUES ('C65432', 'CC12');
 
 
 
-
-
-
 CREATE TABLE Borrowing_Info (
-    Borrowing_ID NUMBER GENERATED ALWAYS AS IDENTITY,
-    Student_ID VARCHAR2(8),
-    Book_Copy_ID VARCHAR2(4),
-    Title VARCHAR2(255),
-    Issue_Date DATE,
-    Expected_Return_Date DATE,
-    Actual_Return_Date DATE DEFAULT TO_DATE ('01-01-00','DD-MM-YY'),
-    Fine NUMBER DEFAULT 0,
-    CONSTRAINT pk_Borrowing_Info PRIMARY KEY (Borrowing_ID),
-    CONSTRAINT fk_Student FOREIGN KEY (Student_ID) REFERENCES Student_Information (Student_ID),
-    CONSTRAINT fk_BookCopy FOREIGN KEY (Book_Copy_ID) REFERENCES Book_Copy (Book_Copy_ID)
+    Borrowing_ID INT AUTO_INCREMENT,
+    Student_ID VARCHAR(8) NOT NULL,
+    Book_Copy_ID VARCHAR(4) NOT NULL,
+    Title VARCHAR(255),
+    Issue_Date DATE NOT NULL,
+    Expected_Return_Date DATE NOT NULL,
+    Actual_Return_Date DATE DEFAULT '2000-01-01',
+    Fine DECIMAL(10, 2) DEFAULT 0,
+    PRIMARY KEY (Borrowing_ID),
+    CONSTRAINT fk_Student FOREIGN KEY (Student_ID) REFERENCES Student_Information (Student_ID) ON DELETE CASCADE,
+    CONSTRAINT fk_BookCopy FOREIGN KEY (Book_Copy_ID) REFERENCES Book_Copy (Book_Copy_ID) ON DELETE CASCADE
 );
-
-ALTER TABLE Borrowing_Info
-ADD ISBN VARCHAR(6);
-
-ALTER TABLE Borrowing_Info
-ADD CONSTRAINT fk_borrowing_isbn
-FOREIGN KEY (ISBN) REFERENCES Book(ISBN);
-
 
 
 

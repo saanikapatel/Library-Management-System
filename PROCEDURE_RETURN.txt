@@ -1,0 +1,44 @@
+DELIMITER $$
+
+CREATE PROCEDURE RETURNBOOK(IN R_BORROWING_ID INT)
+BEGIN
+    DECLARE CHECK_BG_ID INT DEFAULT 0;
+    DECLARE E_R_D DATE;
+    DECLARE A_R_D DATE;
+    DECLARE FINE_CAL DECIMAL(10, 2) DEFAULT 0;
+
+    -- CHECK IF THE BORROWING ID IS VALID AND THE BOOK IS NOT RETURNED ALREADY
+    SELECT COUNT(*) INTO CHECK_BG_ID 
+    FROM Borrowing_Info 
+    WHERE Borrowing_ID = R_BORROWING_ID 
+      AND Actual_Return_Date = '2000-01-01';
+
+    IF CHECK_BG_ID = 1 THEN
+        -- UPDATE THE ACTUAL RETURN DATE TO THE CURRENT DATE
+        UPDATE Borrowing_Info 
+        SET Actual_Return_Date = CURDATE() 
+        WHERE Borrowing_ID = R_BORROWING_ID;
+
+        -- FETCH EXPECTED AND ACTUAL RETURN DATES
+        SELECT Expected_Return_Date, Actual_Return_Date 
+        INTO E_R_D, A_R_D 
+        FROM Borrowing_Info 
+        WHERE Borrowing_ID = R_BORROWING_ID;
+
+        -- CALCULATE FINE IF ACTUAL RETURN IS LATE
+        IF A_R_D > E_R_D THEN
+            SET FINE_CAL = DATEDIFF(A_R_D, E_R_D) * 5;
+            SELECT CONCAT('FINE IS: ', FINE_CAL) AS FineMessage;
+
+            -- UPDATE THE FINE IN BORROWING TABLE
+            UPDATE Borrowing_Info 
+            SET Fine = FINE_CAL 
+            WHERE Borrowing_ID = R_BORROWING_ID;
+        END IF;
+
+    ELSE
+        SELECT 'THERE IS NO BOOK ISSUED TO THIS MEMBER' AS Message;
+    END IF;
+END $$
+
+DELIMITER ;
