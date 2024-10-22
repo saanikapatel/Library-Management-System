@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE TRIGGER updating_avl_after_insert
+AFTER INSERT ON Borrowing_Info
+FOR EACH ROW
+BEGIN
+    UPDATE Book_Copy
+    SET availability_status = 'No'
+    WHERE Book_Copy_ID = NEW.Book_Copy_ID;
+END $$
+
+DELIMITER ;
